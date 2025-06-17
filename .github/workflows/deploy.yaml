@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: "20.x"
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Deploy to Orbiter
         env:
           ORBITER_API_KEY: ${{ secrets.ORBITER_API_KEY }}
