@@ -22,7 +22,8 @@ jobs:
       - name: Deploy to Orbiter
         env:
           ORBITER_API_KEY: ${{ secrets.ORBITER_API_KEY }}
-        run: bunx orbiter-cli@latest deploy-server \
-            --siteId 3c87fed0-7804-4a29-90e3-2b1c0fbbe6b8 \
-            --entryFile src/index.ts \
-            --buildDir dist
+        run: >
+          bunx orbiter-cli@latest deploy-server
+          --siteId 3c87fed0-7804-4a29-90e3-2b1c0fbbe6b8
+          --entryFile src/index.ts
+          --buildDir dist
